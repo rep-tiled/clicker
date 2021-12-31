@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-<title>pre-alpha 1.8</title>
+<title>pre-alpha 1.9</title>
 <link rel="stylesheet" href="game.css">
 <script type="text/javascript" src="game.js"></script>
 </head>
@@ -38,19 +38,17 @@
                 <td id="amount"><span id="joycons">0</span></td>
             </tr>
         </table>
-
-        <!--buy joycon-->
-        <div class ="shopButton" onclick="buyJoycon()">
-            <tr>
-                <td id="nameAndCost">
-                    <p>Joycon Drift</p>
-                    <p><span id="joyconCost">100</span> coins</p>
-                </td>
-                <td id="amount"><span id="joycons">0</span></td>
-            </tr>
-        </div>
-
     </div>
+
+<!--buy macro-->
+<table class="shopButton" onclick="buyMacro()">
+    <tr>
+        <td id="nameAndCost">
+            <p>Macro</p>
+            <p><span id="macroCost">15</span> coins</p>
+        </td>
+        <td id="amount"><span id="macros">0</span></td>
+    </tr>
 
     <script>
         /*remove weirdness*/
