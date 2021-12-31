@@ -74,22 +74,10 @@ h4{
 .shopButton #nameandcost p {
     margin: 0px;
     width: 60%;
-
-    /*blue selection is annoying*/
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
 }
 
 .shopButton #nameAndCost P:first-of-type{
     font-size: 24px;
-
-    /*blue selection is annoying*/
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
 }
 
 .shopButton #amount{
@@ -97,6 +85,14 @@ h4{
     width: 50%;
     direction: rtl;
 
+    /*blue selection is annoying*/
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.shopButton p{
     /*blue selection is annoying*/
     user-select: none;
     -moz-user-select: none;
