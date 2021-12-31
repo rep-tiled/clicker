@@ -94,6 +94,18 @@ function saveGame(){
 /*window load*/
 window.onload = function(){
     loadGame();
+    updateScorePerSecond();
+    /*load stats*/
+    document.getElementById("score").innerHTML = formatCash(score);
+    /*macro visual load*/
+    document.getElementById("macros").innerHTML = macros;
+    document.getElementById("macroCost").innerHTML = macroCost;
+    /*joycon drift visual load*/
+    document.getElementById("joycons").innerHTML = joycons;
+    document.getElementById("joyconCost").innerHTML = joyconCost;
+    /*aimbot visual load*/
+    document.getElementById("aimbots").innerHTML = aimbots;
+    document.getElementById("aimbotCost").innerHTML = aimbotCost;
 }
 
 /*load game*/
