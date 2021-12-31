@@ -16,12 +16,23 @@
         var score = 0;
         var factoryName = "Get Real";
 
-        /*setup prices*/
+        /*setup items*/
+        macros = 0;
 
+        /*setup prices*/
+        macroCost = 15;
 
         /*buy*/
         function buyMacro(){
-            
+            if (score >= macroCost){
+                score = score - macroCost;
+                macros = macros + 1;
+                macroCost = Math.round(macroCost * 1.15);
+                /*visual updates*/
+                document.getElementById("score").innerHTML = score;
+                document.getElementById("macros").innerHTML = macros;
+                document.getElementById("macroCost").innerHTML = macroCost;
+            }
         }
 
         /*progress score function*/
@@ -29,5 +40,11 @@
             score = score + amount;   
             document.getElementById("score").innerHTML = score;
         }
+
+        /*income from items*/
+        setInterval(function(){
+            score = score + macros;
+            document.getElementById("score").innerHTML = score;
+        },1000); //1000ms = a second
     </script>
 </body>
