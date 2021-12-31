@@ -60,6 +60,7 @@ h4{
 /*shop extra*/
 .shopButton {
     background-color: #b5b5b5;
+    color: #b5b5b5;
     transition: all .2s ease-in-out;
     border-radius: 10px;
     width: 100%;
