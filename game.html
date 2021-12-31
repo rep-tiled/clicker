@@ -136,7 +136,7 @@ function loadGame(){
 function resetGame(){
     if(confirm("are you sure you want to reset your game? This can not be undone.")){
         var gameSave = {};
-        localStorage.setItem(gameSave, JSON.stringify(gameSave));
+        localStorage.setItem("clickerSave", JSON.stringify(gameSave));
         window.location.reload();
     }
 }
