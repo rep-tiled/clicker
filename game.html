@@ -93,8 +93,8 @@ function saveGame(){
 
 /*load game*/
 function loadGame(){
-    var savedGame = JSON.parse(localStorage.getItem("gameSave"));
-    if (typeof clickerSave.score != "undefined") score = clickerSave.score;
+    var savedGame = JSON.parse(localStorage.getItem("clickerSave"));
+    if (typeof savedGame.score !== "undefined") score = savedGame.score;
 }
 
 /*buy*/
