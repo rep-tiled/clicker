@@ -35,6 +35,13 @@ h4{
     position: relative;
     display: flex;
     justify-content: center;
+
+    /*anti highlight*/
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 /*click animation*/
@@ -48,4 +55,33 @@ h4{
 
 .mainClicker img:active{
     transform: scale(0.98);
+}
+
+/*shop extra*/
+.shopButton {
+    background-color: #b5b5b5;
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px 10px 10px 0px;
+}
+
+.shopButton:hover {
+    background-color: #c7c7c7;
+    transition: all .2s ease-in-out;
+}
+
+.shopButton #nameandcost p {
+    margin: 0px;
+    width: 60%;
+}
+
+.shopButton #nameAndCost P:first-of-type{
+    font-size: 24px;
+}
+
+.shopButton #amount{
+    font-size: 48px;
+    width: 50%;
+    direction: rtl;
 }
