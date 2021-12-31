@@ -66,6 +66,7 @@ h4{
     margin: 10px 10px 10px 0px;
 
     word-wrap: break-word;
+    box-sizing: border-box;
 }
 
 .shopButton:hover {
