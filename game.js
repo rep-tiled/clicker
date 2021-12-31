@@ -1,5 +1,3 @@
-        alert("halp")
-        
         /*remove weirdness*/
         document.getElementById('mainButton').setAttribute('draggable', false); //anti drag
 
