@@ -4,5 +4,17 @@
 </head>
 <!--body-->
 <body>
-    <img src="https://i.imgur.com/EgSAdk7.png" alt="button" height="256" width="256">
+    <h2>Money: <span id="score">0</span></h2>
+    <img src="https://i.imgur.com/EgSAdk7.png" alt="lizard" height="256" width="256" onclick="addToScore(1)">
+
+    <script>
+        var score = 0;
+        var factoryName = "Get Real";
+
+        /*progress score function*/
+        function addToScore(amount){
+            score = score + amount;   
+            document.getElementById("score").innerHTML = score;
+        }
+    </script>
 </body>
