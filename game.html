@@ -91,10 +91,16 @@ function saveGame(){
     localStorage.setItem("clickerSave", JSON.stringify(gameSave));
 }
 
+/*window load*/
+window.onload = function(){
+    loadGame();
+}
+
 /*load game*/
 function loadGame(){
     var savedGame = JSON.parse(localStorage.getItem("clickerSave"));
     if (typeof savedGame.score !== "undefined") score = savedGame.score;
+    alert(saveGame.score);
 }
 
 /*buy*/
