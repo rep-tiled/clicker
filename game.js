@@ -17,6 +17,31 @@
         joyconCost = 100;
         aimbotCost = 1100;
 
+        /*save game*/
+        function saveGame(){
+            var gameSave = {
+                /*player*/
+                score: score,
+                factoryName: factoryName,
+                clickingPower: clickingPower,
+                /*items*/
+                macros: macros,
+                joycons: joycons,
+                aimbots: aimbots,
+                /*costs*/
+                macroCost: macroCost,
+                joyconCost: joyconCost,
+                aimbotCost: aimbotCost
+            }
+            localStorage.setItem("clickerSave", JSON.stringify(gameSave));
+        }
+
+        /*load game*/
+        function loadGame(){
+            var savedGame = JSON.parse(localStorage.getItem("gameSave"));
+            if (typeof saveGame.score != "undefined") score = saveGame.score;
+        }
+
         /*buy*/
         function buyMacro(){
             if (score >= macroCost){
@@ -97,3 +122,8 @@
             /*update the title of page*/
             document.title = score + " score - Lizard's Clicker"
         },1000); //1000ms is 1 second
+
+        /*save loop*/
+        setInterval(function(){
+            saveGame();
+        },3000);
