@@ -99,7 +99,18 @@ window.onload = function(){
 /*load game*/
 function loadGame(){
     var savedGame = JSON.parse(localStorage.getItem("clickerSave"));
+    /*player*/
     if (typeof savedGame.score !== "undefined") score = savedGame.score;
+    if (typeof savedGame.factoryName !== "undefined") factoryName = savedGame.factoryName;
+    if (typeof savedGame.clickingPower !== "undefined") clickingPower = savedGame.clickingPower;
+    /*items*/
+    if (typeof savedGame.macros !== "undefined") macros = savedGame.macros;
+    if (typeof savedGame.joycons !== "undefined") joycons = savedGame.joycons;
+    if (typeof savedGame.aimbots !== "undefined") aimbots = savedGame.aimbots;
+    /*costs*/
+    if (typeof savedGame.macroCost !== "undefined") macroCost = savedGame.macroCost;
+    if (typeof savedGame.joyconCost !== "undefined") joyconCost = savedGame.joyconCost;
+    if (typeof savedGame.aimbotCost !== "undefined") aimbotCost = savedGame.aimbotCost;
 }
 
 /*buy*/
