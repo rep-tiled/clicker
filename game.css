@@ -15,5 +15,14 @@ h4{
 
 /*divs*/
 .shop{
+    float: right;
+}
+
+.stats{
     float: left;
+}
+
+.mainClicker{
+    display: flex;
+    justify-content: center;
 }
