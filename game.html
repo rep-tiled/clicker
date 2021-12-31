@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 <!--meta-->
-<title>pre-alpha 3.3</title>
+<title>pre-alpha 3.4</title>
 <link rel="stylesheet" href="game.css">
 </head>
 <!--body-->
@@ -95,7 +95,6 @@ function saveGame(){
 function loadGame(){
     var savedGame = JSON.parse(localStorage.getItem("gameSave"));
     if (typeof clickerSave.score != "undefined") score = clickerSave.score;
-    alert(clickerSave.score + " score loaded")
 }
 
 /*buy*/
