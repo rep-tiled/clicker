@@ -44,6 +44,12 @@
     transform:scale(0.98);
     }
     
+    /*div based shop button*/
+    .shopItemButton{
+    background-color:#fff;
+    border-radius:5px; 
+    }
+
     /*shop button*/
     .shopButton {
     background-color:#fff;
