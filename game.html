@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-<title>pre-alpha 2.7</title>
+<title>pre-alpha 2.8</title>
 <link rel="stylesheet" href="game.css">
 <script type="text/javascript" src="game.js"></script>
 </head>
@@ -38,6 +38,15 @@
                 <td id="amount"><span id="joycons">0</span></td>
             </tr>
         </table>
+        <!--buy aimbot-->
+        <table class="shopButton" onclick="buyAimbot()">
+            <tr>
+                <td id="nameAndCost">
+                    <p>Aimbot</p>
+                    <p><span id="macroCost">1100</span> coins</p>
+                </td>
+                <td id="amount"><span id="aimbots">0</span></td>
+            </tr>
     </div>
 
     <script>
@@ -53,7 +62,7 @@
         /*setup items*/
         macros = 0;
         joycons = 0;
-        aimbot = 0;
+        aimbots = 0;
 
         /*setup prices*/
         macroCost = 15;
@@ -89,6 +98,20 @@
             }
         }
 
+        function buyAimbot(){
+            if (score >= aimbotCost){
+                score = score - aimbotCost;
+                aimbots = aimbots + 1;
+                aimbotCost = Math.round(aimbotCost * 1.15);
+                /*visual updates*/
+                document.getElementById("score").innerHTML = formatCash(score);
+                document.getElementById("aimbots").innerHTML = aimbots;
+                document.getElementById("aimbotCost").innerHTML = aimbotCost;
+                /*update score per second*/
+                updateScorePerSecond();
+            }
+        }
+
         /*progress score function*/
         function addToScore(amount){
             score = score + amount;   
@@ -117,8 +140,10 @@
         setInterval(function(){
             /*macro payload*/
             score = score + macros;
-            /* joycon payload*/
+            /*joycon payload*/
             score = score + (joycons * 5);
+            /*aimbot payload*/
+            score = score + (aimbots * 10)
             /*update score*/
             document.getElementById("score").innerHTML = formatCash(score);
             /*update the title of page*/
