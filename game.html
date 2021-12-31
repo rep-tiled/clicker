@@ -95,6 +95,7 @@ function saveGame(){
 function loadGame(){
     var savedGame = JSON.parse(localStorage.getItem("gameSave"));
     if (typeof saveGame.score != "undefined") score = saveGame.score;
+    alert(saveGame.score + " score loaded")
 }
 
 /*buy*/
