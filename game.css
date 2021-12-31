@@ -4,7 +4,7 @@ body{
 
 /*text*/
 h2{
-font-family: Helvetica;
+    font-family: Helvetica;
 }
 h3{
     font-family: Helvetica;
@@ -24,10 +24,28 @@ h4{
 
 /*cotainers*/
 .stats{
-    background-color: rgba(151, 151, 151, 0.301);
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin: 1%;
+    font-weight: bold;
+    width: 10%;
 }
 
 .mainClicker{
+    position: relative;
     display: flex;
     justify-content: center;
+}
+
+/*click animation*/
+.mainClicker img {
+    transition: all .2s ease-in-out;
+}
+
+.mainClicker img:hover{
+    transform: scale(1.10);
+}
+
+.mainClicker img:active{
+    transform: scale(0.98);
 }
