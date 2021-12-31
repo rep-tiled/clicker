@@ -13,13 +13,18 @@ h4{
     font-family: Helvetica;
 }
 
-/*divs*/
-.shop{
+/*sections*/
+.right{
     float: right;
 }
 
-.stats{
+.left{
     float: left;
+}
+
+/*cotainers*/
+.stats{
+    background-color: rgba(151, 151, 151, 0.301);
 }
 
 .mainClicker{
