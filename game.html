@@ -10,13 +10,17 @@
         <div class="stats">
     <h2>Money: <span id="score">0</span></h2>
     <h2>MPS: <span id ="scorePerSecond">0</span></h2>
-    <button onclick="saveGame()">quick save</button>
+    <button onclick="resetGame()">Reset Game</button>
         </div>
     </header>
 
     <div class ="mainClicker">
     <img src="https://i.imgur.com/EgSAdk7.png" alt="lizard" height="256" width="256" onclick="addToScore(clickingPower)" id="mainButton">
     </div>
+
+    <!--debug
+    <button onclick="saveGame()">quick save</button>
+    -->
 
     <!--Shop-->
     <div class="right">
@@ -50,6 +54,9 @@
             </tr>
     </div>
 
+<footer>
+    
+</footer>
 
 <!--script-->
 <script>
@@ -123,6 +130,15 @@ function loadGame(){
     if (typeof savedGame.macroCost !== "undefined") macroCost = savedGame.macroCost;
     if (typeof savedGame.joyconCost !== "undefined") joyconCost = savedGame.joyconCost;
     if (typeof savedGame.aimbotCost !== "undefined") aimbotCost = savedGame.aimbotCost;
+}
+
+/*reset game*/
+function resetGame(){
+    if(confirm("are you sure you want to reset your game? This can not be undone.")){
+        var gameSave = {};
+        localStorage.setItem(gameSave, JSON.stringify(gameSave));
+        window.location.reload();
+    }
 }
 
 /*buy*/
@@ -210,6 +226,14 @@ setInterval(function(){
 setInterval(function(){
     saveGame();
 },3000);
+
+/*cntrl s override*/
+document.addEventListener("keydown",function(event){
+    if (event.ctrlKey && event.which == 83){ //cntrl + s
+        event.preventDefault();
+        saveGame();
+    }
+},false);
 </script>
 
 </body>
