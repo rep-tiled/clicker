@@ -1,7 +1,9 @@
-body {
+    /*body*/
+    body {
     background-color:#192e17;
     }
     
+    /*main layout*/
     .right {
     float:right;
     }
@@ -18,6 +20,7 @@ body {
     margin:1%;
     }
     
+    /*main clicker*/
     .mainClicker {
     position:relative;
     display:flex;
@@ -41,6 +44,7 @@ body {
     transform:scale(0.98);
     }
     
+    /*shop button*/
     .shopButton {
     background-color:#fff;
     border-radius:5px;
@@ -80,6 +84,7 @@ body {
     -ms-user-select:none;
     }
     
+    /*text*/
     h2,h3,h4 {
     font-family:Helvetica;
     }
